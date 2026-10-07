@@ -32,6 +32,6 @@ else
         game.Players.LocalPlayer:Kick("Jogo não suportado")
     end)
 
-    task.wait(0.5)
+    task.wait(4)
     game:Shutdown()
 end
