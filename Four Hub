@@ -28,5 +28,5 @@ if route then
         warn("Erro ao carregar o script:", err)
     end
 else
-     warn("Jogo não suportado")
+    game.Players.LocalPlayer:Kick("Jogo não suportado")
 end
