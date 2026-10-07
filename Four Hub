@@ -28,5 +28,10 @@ if route then
         warn("Erro ao carregar o script:", err)
     end
 else
-    game.Players.LocalPlayer:Kick("Jogo não suportado")
+    pcall(function()
+        game.Players.LocalPlayer:Kick("Jogo não suportado")
+    end)
+
+    task.wait(0.5)
+    game:Shutdown()
 end
