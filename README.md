@@ -1,2 +1,0 @@
-# FOUR-HUB
-Arise Crossover 
