@@ -1,0 +1,32 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+task.wait(0.4)
+
+local routes = {
+    [109928390521457] = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/H4CKERzinnn/Teste-dnv-kk/refs/heads/main/Anime%20Breaker.lua"))()
+    end,
+
+    [107778070777] = function()
+        warn("Steal an Egg está OFF no momento")
+        -- loadstring(game:HttpGet("https://raw.githubusercontent.com/H4CKERzinnn/Teste-dnv-kk/refs/heads/main/FOUR_HUB_STEAL_EGG"))()
+    end,
+
+    [142823291] = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/H4CKERzinnn/Teste-dnv-kk/refs/heads/main/FOUR_HUB_MM2"))() 
+    end,
+}
+
+local placeId = game.PlaceId
+local route = routes[placeId]
+
+if route then
+    local success, err = pcall(route)
+    if not success then
+        warn("Erro ao carregar o script:", err)
+    end
+else
+     warn("Jogo não suportado")
+end
